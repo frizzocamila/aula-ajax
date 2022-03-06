@@ -62,7 +62,8 @@ $('#btnSearch').click(function(){
         `).appendTo('#profile-info');
       },
       error: function(data){
-        $('#error').append(`<span>${data.status}</span>`);
+        $('#error #appendRemove').remove();
+        $('#error').append(`<span id="appendRemove">${data.status}</span>`);
         erro.show();
       },
       complete: function(){
